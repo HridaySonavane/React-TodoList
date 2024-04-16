@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .todoList {
+        @apply w-96 h-12 bg-gray-200 m-auto my-4 rounded-md text-black text-center text-lg font-semibold leading-[3rem]
+    }
+}
