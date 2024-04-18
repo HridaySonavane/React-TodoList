@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <div>
+    <div className="">
       <div className="absolute top-0 w-screen bg-zinc-900 h-1/2" />
 
       <div className="w-screen relative top-52 flex flex-col justify-center items-center">
