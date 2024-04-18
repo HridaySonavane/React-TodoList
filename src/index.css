@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer components {
+
+    html{
+        @apply scrollbar-stable overflow-x-hidden
+    }
+    
     .todoList {
         @apply w-96 h-12 bg-gray-200 m-auto my-4 rounded-md text-black text-center text-lg font-semibold leading-[3rem]
     }
