@@ -6,9 +6,9 @@ function TodoList() {
 	const [todos, setTodos] = useState([]);
 	const [isLoading, setIsLoading] = useState();
 
-  setTimeout(() => {
-    setIsLoading(false)
-  }, 2000);
+	setTimeout(() => {
+		setIsLoading(false);
+	}, 3000);
 
 	const handleChange = (e) => {
 		setInput(e.target.value);
@@ -18,17 +18,16 @@ function TodoList() {
 		if (input.trim() !== "") {
 			setTodos([input, ...todos]); // Add new todo to the beginning of the array
 			setInput("");
-      setIsLoading(true)
+			setIsLoading(true);
 		}
 	};
 
 	const handleKeyDown = (e) => {
 		if (e.key === "Enter") {
-      if (input.trim() !== "") {
-        setIsLoading(true)
-			  handleClick();
-      }
-      
+			if (input.trim() !== "") {
+				setIsLoading(true);
+				handleClick();
+			}
 		}
 	};
 
@@ -36,8 +35,7 @@ function TodoList() {
 		setTodos([]);
 	};
 	return (
-		<div className="absolute flex justify-center items-center w-screen h-full bg-zinc-900">
-			{/* <FaPlus/> */}
+		<div className="absolute flex justify-center items-center w-screen h-full bg-zinc-900 overflow-hidden">
 			<div className="card relative w-[450px] h-[500px] bg-white rounded-md">
 				<div className="text-3xl font-bold mb-10 ml-4 mt-4">ToDo-List</div>
 				<div className="flex relative justify-evenly ">
@@ -59,9 +57,7 @@ function TodoList() {
 				</div>
 
 				{isLoading ? (
-					<div
-          className="w-[450px] m-auto flex justify-center relative top-20  "
-					>
+					<div className="w-[450px] m-auto flex justify-center relative top-20  ">
 						<Spinner />
 					</div>
 				) : (

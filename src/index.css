@@ -4,8 +4,8 @@
 
 @layer components {
 
-    html{
-        @apply scrollbar-stable overflow-x-hidden
+    html {
+        overflow-x: hidden;
     }
     
     .todoList {
